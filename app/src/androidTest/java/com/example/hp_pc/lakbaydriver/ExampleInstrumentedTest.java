@@ -1,4 +1,4 @@
-package com.example.hp_pc.lakbaydriver;
+package com.example.lakbaydriver;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.hp_pc.lakbaydriver", appContext.getPackageName());
+        assertEquals("com.example.lakbaydriver", appContext.getPackageName());
     }
 }

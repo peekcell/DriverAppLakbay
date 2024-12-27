@@ -1,8 +1,8 @@
-package com.example.hp_pc.lakbaydriver;
+package com.example.lakbaydriver;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -37,6 +37,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import com.example.lakbaydriver.R;
 
 public class HistorySingleActivity extends AppCompatActivity implements OnMapReadyCallback, RoutingListener {
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hp_pc.lakbaydriver">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -26,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/Lakbay">
         <service android:name=".OnAppKilled" android:stopWithTask="false"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,7 +66,7 @@
             android:theme="@style/Lakbay">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hp_pc.lakbaydriver.DashboardActivity" />
+                android:value=".DashboardActivity" />
         </activity>
         <activity
             android:name=".AccountSettingsActivity"
@@ -76,12 +75,12 @@
             android:theme="@style/Lakbay">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hp_pc.lakbaydriver.DashboardActivity" />
+                android:value=".DashboardActivity" />
         </activity>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.hp_pc.lakbaydriver"
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.lakbaydriver"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -96,7 +95,7 @@
             android:theme="@style/Lakbay">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hp_pc.lakbaydriver.DashboardActivity" />
+                android:value=".DashboardActivity" />
         </activity>
         <activity android:name=".HistorySingleActivity"
             android:label="@string/title_activity_history_single"

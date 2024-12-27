@@ -1,4 +1,4 @@
-package com.example.hp_pc.lakbaydriver;
+package com.example.lakbaydriver;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -9,14 +9,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.DatePicker;
@@ -177,7 +176,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.hp_pc.lakbaydriver",
+                        "com.example.lakbaydriver",
                         photoFile);
                 resultUri = Uri.fromFile(photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
@@ -293,7 +292,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
             uploadTask.addOnFailureListener(new OnFailureListener() {
                 @Override
-                public void onFailure(@NonNull Exception e) {
+                public void onFailure(Exception e) {
 //                    finish();
 //                    return;
                 }
@@ -302,11 +301,11 @@ public class AccountSettingsActivity extends AppCompatActivity {
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Uri downloadUrl = taskSnapshot.getDownloadUrl();
-
-                    Map newImage = new HashMap();
-                    newImage.put("profile_image_url", downloadUrl.toString());
-                    userdata.updateChildren(newImage);
+//                    Uri downloadUrl = taskSnapshot.getDownloadUrl();
+//
+//                    Map newImage = new HashMap();
+//                    newImage.put("profile_image_url", downloadUrl.toString());
+//                    userdata.updateChildren(newImage);
 
 //                    finish();
 //                    return;

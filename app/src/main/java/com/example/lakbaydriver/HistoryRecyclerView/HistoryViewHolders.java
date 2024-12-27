@@ -1,13 +1,13 @@
-package com.example.hp_pc.lakbaydriver.HistoryRecyclerView;
+package com.example.lakbaydriver.HistoryRecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.hp_pc.lakbaydriver.HistorySingleActivity;
-import com.example.hp_pc.lakbaydriver.R;
+import com.example.lakbaydriver.HistorySingleActivity;
+import com.example.lakbaydriver.R;
 
 /**
  * Created by HP-PC on 20/03/2018.

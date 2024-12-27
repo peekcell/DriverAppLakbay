@@ -1,14 +1,14 @@
-package com.example.hp_pc.lakbaydriver;
+package com.example.lakbaydriver;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.format.DateFormat;
 
-import com.example.hp_pc.lakbaydriver.HistoryRecyclerView.HistoryAdapter;
-import com.example.hp_pc.lakbaydriver.HistoryRecyclerView.HistoryObject;
+import com.example.lakbaydriver.HistoryRecyclerView.HistoryAdapter;
+import com.example.lakbaydriver.HistoryRecyclerView.HistoryObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

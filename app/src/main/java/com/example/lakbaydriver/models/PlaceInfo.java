@@ -1,4 +1,4 @@
-package com.example.hp_pc.lakbaydriver.models;
+package com.example.lakbaydriver.models;
 
 import android.net.Uri;
 

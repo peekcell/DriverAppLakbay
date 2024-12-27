@@ -1,12 +1,12 @@
-package com.example.hp_pc.lakbaydriver.HistoryRecyclerView;
+package com.example.lakbaydriver.HistoryRecyclerView;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hp_pc.lakbaydriver.R;
+import com.example.lakbaydriver.R;
 
 import java.util.List;
 

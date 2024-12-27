@@ -1,4 +1,4 @@
-package com.example.hp_pc.lakbaydriver;
+package com.example.lakbaydriver;
 
 import org.junit.Test;
 

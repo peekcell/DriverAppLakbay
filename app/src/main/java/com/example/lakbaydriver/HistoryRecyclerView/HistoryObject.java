@@ -1,4 +1,4 @@
-package com.example.hp_pc.lakbaydriver.HistoryRecyclerView;
+package com.example.lakbaydriver.HistoryRecyclerView;
 
 /**
  * Created by HP-PC on 20/03/2018.
