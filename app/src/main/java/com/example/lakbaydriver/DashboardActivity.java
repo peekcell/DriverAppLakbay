@@ -58,11 +58,15 @@ public class DashboardActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        setSupportActionBar(toolbar);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        toggle.setDrawerIndicatorEnabled(true); // Ensure the default icon is shown
 
 
         startService(new Intent(DashboardActivity.this, OnAppKilled.class));
@@ -117,14 +121,14 @@ public class DashboardActivity extends AppCompatActivity
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0){
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                    if (map.get("user_firstname") != null && map.get("user_lastname") != null){
-                        firstName = map.get("user_firstname").toString();
-                        lastName = map.get("user_lastname").toString();
+                    if (map.get("firstName") != null && map.get("lastName") != null){
+                        firstName = map.get("firstName").toString();
+                        lastName = map.get("lastName").toString();
                         name.setText(firstName + " " + lastName);
 //                        userName.setText(new UserPreference().getUser(MainActivity.this).userName);
                     }
-                    if (map.get("profile_image_url") != null){
-                        profileImageUrl = map.get("profile_image_url").toString();
+                    if (map.get("imageUrl") != null){
+                        profileImageUrl = map.get("imageUrl").toString();
                         Glide.with(getApplication()).load(profileImageUrl).into(userImage);
                     }               
                 }

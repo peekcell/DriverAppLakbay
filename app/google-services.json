@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "328174923693-km9niij8jcasm4imo2nfl1nks92batmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lakbaydriver",
+            "certificate_hash": "c7ca776fe52273001ede4145f086faa5768707ce"
+          }
+        },
+        {
           "client_id": "328174923693-e3evber37tarieb1iebmd91o4098atgf.apps.googleusercontent.com",
           "client_type": 3
         }

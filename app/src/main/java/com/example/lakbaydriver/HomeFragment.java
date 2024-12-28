@@ -372,9 +372,9 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
 //                    pBar.setVisibility(View.GONE);
                     Info.setVisibility(View.VISIBLE);
-                    if (map.get("user_firstname") != null && map.get("user_lastname") != null){
-                        driverFirstName = map.get("user_firstname").toString();
-                        driverLastName = map.get("user_lastname").toString();
+                    if (map.get("firstName") != null && map.get("lastName") != null){
+                        driverFirstName = map.get("firstName").toString();
+                        driverLastName = map.get("lastName").toString();
 
                     }
 
@@ -397,16 +397,16 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Google
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
 //                    pBar.setVisibility(View.GONE);
                     Info.setVisibility(View.VISIBLE);
-                    if (map.get("user_firstname") != null && map.get("user_lastname") != null){
-                        firstName = map.get("user_firstname").toString();
-                        lastName = map.get("user_lastname").toString();
+                    if (map.get("firstName") != null && map.get("lastName") != null){
+                        firstName = map.get("firstName").toString();
+                        lastName = map.get("lastName").toString();
                         name.setText(firstName + " " + lastName);
                     }
-                    if (map.get("user_mobile") != null){
-                        phone.setText(map.get("user_mobile").toString());
+                    if (map.get("mobile") != null){
+                        phone.setText(map.get("mobile").toString());
                     }
-                    if (map.get("profile_image_url") != null){
-                        Glide.with(getActivity().getApplication()).load(map.get("profile_image_url").toString()).into(userImage);
+                    if (map.get("imageUrl") != null){
+                        Glide.with(getActivity().getApplication()).load(map.get("imageUrl").toString()).into(userImage);
                     }
                 }
             }

@@ -230,24 +230,24 @@ public class AccountSettingsActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0){
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                    if (map.get("user_firstname") != null){
-                        firstName = map.get("user_firstname").toString();
+                    if (map.get("firstName") != null){
+                        firstName = map.get("firstName").toString();
                         etfirstName.setText(firstName);
                     }
-                    if (map.get("user_lastname") != null){
-                        lastName = map.get("user_lastname").toString();
+                    if (map.get("lastName") != null){
+                        lastName = map.get("lastName").toString();
                         etlastName.setText(lastName);
                     }
-                    if (map.get("user_mobile") != null){
-                        number = map.get("user_mobile").toString();
+                    if (map.get("mobile") != null){
+                        number = map.get("mobile").toString();
                         etnumber.setText(number);
                     }
-                    if (map.get("user_birthdate") != null){
-                        birthDate = map.get("user_birthdate").toString();
+                    if (map.get("birthDate") != null){
+                        birthDate = map.get("birthDate").toString();
                         etbirthDate.setText(birthDate);
                     }
-                    if (map.get("profile_image_url") != null){
-                        profileImageUrl = map.get("profile_image_url").toString();
+                    if (map.get("imageUrl") != null){
+                        profileImageUrl = map.get("imageUrl").toString();
                         Glide.with(getApplication()).load(profileImageUrl).into(mProfileImage);
                     }
                 }
@@ -268,10 +268,10 @@ public class AccountSettingsActivity extends AppCompatActivity {
         birthDate = etbirthDate.getText().toString();
 
         Map userInfo = new HashMap();
-        userInfo.put("user_firstname", firstName);
-        userInfo.put("user_lastname", lastName);
-        userInfo.put("user_mobile", number);
-        userInfo.put("user_birthdate", birthDate);
+        userInfo.put("fistName", firstName);
+        userInfo.put("lastName", lastName);
+        userInfo.put("mobile", number);
+        userInfo.put("birthDate", birthDate);
         userdata.updateChildren(userInfo);
 
         if (resultUri != null){
